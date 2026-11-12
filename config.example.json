@@ -19,7 +19,8 @@
       "paired": false,
       "quick": [
         "sleep",
-        "look"
+        "look",
+        "input"
       ]
     }
   ],
