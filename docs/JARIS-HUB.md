@@ -78,7 +78,8 @@ Samsung's current developer instructions use Apps → App Settings → 12345 →
 Use the bridge computer's numeric IP address, not a `.local` hostname:
 
 ```powershell
-.venv\Scripts\python.exe samsung\build.py --bridge http://<bridge-ip>:5400 --tv living-room
+$BRIDGE_IP = "192.168.50.x"  # Replace with the bridge computer's reserved LAN IP
+.venv\Scripts\python.exe samsung\build.py --bridge "http://$BRIDGE_IP:5400" --tv living-room
 ```
 
 The unsigned package is created at:
@@ -96,8 +97,9 @@ Install Apps2Samsung on the computer, open it, select the S90D and choose the lo
 The command-line route is also supported:
 
 ```powershell
-apps2samsung-cli tv <tv-ip>
-apps2samsung-cli install build\samsung\JarisHub.wgt --tv <tv-ip>
+$TV_IP = "192.168.50.x"  # Replace with the S90D's reserved LAN IP
+apps2samsung-cli tv $TV_IP
+apps2samsung-cli install build\samsung\JarisHub.wgt --tv $TV_IP
 ```
 
 ## 7. Pair the bridge and test automatic launch
