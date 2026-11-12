@@ -1,4 +1,6 @@
-# couch-tv
+# Jaris Hub (based on couch-tv)
+
+Jaris Hub is a personal Samsung TV launcher fork of [Seagey/couch-tv](https://github.com/Seagey/couch-tv). It keeps the upstream photographic scenes, large frosted clock, TV app navigation and MIT licence, with Singapore-first defaults and the Jaris Hub app name. See [docs/JARIS-HUB.md](docs/JARIS-HUB.md) for this fork's setup path and remaining deployment steps.
 
 Your own home screen and phone remote for a Google TV, an Android TV or a Fire TV, with app
 versions for Samsung and LG (run on ten real LGs so far), a Roku version, and Beta versions for

@@ -9,45 +9,75 @@
   "tvs": [
     {
       "id": "living-room",
-      "name": "Living room",
+      "name": "Samsung S90D",
       "label": "Living room TV",
       "ip": "SET_YOUR_TV_IP",
-      "adb_port": 5555,
+      "kind": "samsung",
       "mac": "",
       "wake_on_lan": true,
+      "open_on_power_on": true,
       "paired": false,
-      "keep_disabled": "data/keep-disabled.json",
-      "quick": ["sleep"]
+      "quick": [
+        "sleep",
+        "look",
+        "input"
+      ]
     }
   ],
-  "people": [
-    { "id": "person1", "name": "Person 1" },
-    { "id": "person2", "name": "Person 2" },
-    { "id": "kids", "name": "Kids", "kid": true }
-  ],
+  "people": [],
   "home": {
     "look": "night",
-    "scenes": ["night", "golden", "water", "fog", "dawn"],
+    "scenes": [
+      "night",
+      "golden",
+      "water",
+      "fog",
+      "dawn"
+    ],
     "scene_seconds": 20,
+    "idle_photo_seconds": 0,
+    "clock": "24h",
     "dock_size": 10,
-    "sun_sync": false,
-    "hide_packages": []
+    "hide_packages": [],
+    "language": "en",
+    "glass": "on",
+    "glass_icons": true,
+    "glass_amount": 3,
+    "clock_style": "frosted",
+    "glass_focus": "colour"
   },
   "phone_remote": true,
-  "ask": { "enabled": false },
-  "weather": {
-    "lat": -33.8688,
-    "lon": 151.2093,
-    "place": "Sydney",
-    "timezone": "Australia/Sydney"
+  "ask": {
+    "enabled": false
   },
-  "country": "AU",
+  "weather": {
+    "lat": 1.3521,
+    "lon": 103.8198,
+    "place": "Singapore",
+    "timezone": "Asia/Singapore"
+  },
+  "country": "SG",
+  "client_name": "Jaris Hub bridge",
   "screens": [],
   "home_assistant": {
     "enabled": false,
     "url": "http://homeassistant.local:8123",
-    "climate": [{ "entity": "climate.living_room", "name": "Living room" }],
-    "scenes": [{ "entity": "scene.movie_night", "name": "Movie night" }],
-    "doorbell": { "entity": "event.front_door_ding", "camera": "camera.front_door", "name": "Front door" }
+    "climate": [
+      {
+        "entity": "climate.living_room",
+        "name": "Living room"
+      }
+    ],
+    "scenes": [
+      {
+        "entity": "scene.movie_night",
+        "name": "Movie night"
+      }
+    ],
+    "doorbell": {
+      "entity": "event.front_door_ding",
+      "camera": "camera.front_door",
+      "name": "Front door"
+    }
   }
 }

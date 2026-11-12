@@ -1,9 +1,9 @@
-# couch-tv on a Samsung TV
+# Jaris Hub on a Samsung TV
 
 Samsung TVs run Tizen, not Android, and Samsung does not let any app replace its home screen. So
-couch-tv on a Samsung is **an app that opens itself, not a true home screen**:
+Jaris Hub on a Samsung is **an app that opens itself, not a true home screen**:
 
-- **The couch-tv app** (`samsung/`): the same TV home as on Google TV (scenes, clock, weather,
+- **The Jaris Hub app** (`samsung/`): the same TV home as on Google TV (scenes, clock, weather,
   your apps in your order, Keep watching), packed as a Samsung app. Its tiles open the Samsung
   versions of Netflix, YouTube and the rest. You install it yourself with a free tool.
 - **The hook** (`bridge/samsung.py`): the bridge (option B, a computer that stays on) watches the
@@ -140,13 +140,13 @@ It should say "ready", Developer mode on, and your computer's address as the hos
 Use the computer's number address (for example `http://192.0.2.20:5400`), not its `.local` name:
 the TV looks the name up only now and then and can miss it. With more than one TV in
 `config.json`, add `--tv <id>` for this TV. This makes
-`build/samsung/CouchTV.wgt`. It holds the TV home, the app ids for Samsung, and a copy of your
+`build/samsung/JarisHub.wgt`. It holds the TV home, the app ids for Samsung, and a copy of your
 settings for when the computer is off. No passwords or keys go in it.
 
 ### 3. Install it (the Samsung sign-in happens here, once)
 
 ```sh
-apps2samsung-cli install build/samsung/CouchTV.wgt --tv <tv address>
+apps2samsung-cli install build/samsung/JarisHub.wgt --tv <tv address>
 ```
 
 The first time, a browser opens for the Samsung account sign-in. After that the certificate is kept
@@ -157,7 +157,7 @@ on the computer and later installs need nothing.
 computer. From the computer you are sitting at, run `ssh -L 4794:localhost:4794 <bridge computer>`,
 leave it open, and open the printed URL in your own browser. The callback then reaches the bridge
 computer and the certificate is made there. The app appears on the TV's app row as
-**Couch TV** and opens.
+**Jaris Hub** and opens.
 
 ### 4. Tell the bridge about the TV
 

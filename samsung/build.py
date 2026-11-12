@@ -1,4 +1,4 @@
-"""Pack couch-tv as a Samsung TV app: build/samsung/CouchTV.wgt (unsigned).
+"""Pack couch-tv as a Samsung TV app: build/samsung/JarisHub.wgt (unsigned).
 
     .venv/bin/python samsung/build.py --bridge http://my-computer.local:5400 [--tv living-room]
     .venv/bin/python samsung/build.py              (no bridge: the home on its own, apps only)
@@ -107,7 +107,7 @@ def main():
     with open(os.path.join(stage, "tizen-apps.js"), "w") as f:
         f.write("window.COUCH_TIZEN_APPS = " + json.dumps(table, indent=1) + ";\n")
 
-    wgt = os.path.join(OUT, "CouchTV.wgt")
+    wgt = os.path.join(OUT, "JarisHub.wgt")
     if os.path.exists(wgt):
         os.remove(wgt)
     with zipfile.ZipFile(wgt, "w", zipfile.ZIP_DEFLATED) as z:

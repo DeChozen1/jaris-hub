@@ -1,0 +1,27 @@
+name: Samsung Tizen package
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  samsung-wgt:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Validate example configuration
+        run: python -m json.tool config.example.json > /dev/null
+      - name: Build Samsung WGT
+        run: python samsung/build.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: jaris-hub-samsung-wgt
+          path: build/samsung/JarisHub.wgt
+          if-no-files-found: error

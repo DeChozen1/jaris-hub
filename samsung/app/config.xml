@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- couch-tv for Samsung TVs (Tizen). samsung/build.py copies the TV home (tv-home/web) next to
+<!-- Jaris Hub for Samsung TVs (Tizen), based on couch-tv. samsung/build.py copies the TV home (tv-home/web) next to
      this file and packs it as build/samsung/CouchTV.wgt. See docs/SAMSUNG.md. -->
 <widget xmlns="http://www.w3.org/ns/widgets" xmlns:tizen="http://tizen.org/ns/widgets"
-        id="https://github.com/couch-tv/samsung" version="1.0.0" viewmodes="maximized">
+        id="https://github.com/DeChozen1/jaris-hub/samsung" version="1.0.0" viewmodes="maximized">
   <tizen:application id="CouchTVApp.Home" package="CouchTVApp" required_version="2.3"/>
   <content src="boot.html"/>
-  <name>Couch TV</name>
+  <name>Jaris Hub</name>
   <icon src="icon.png"/>
   <access origin="*" subdomains="true"/>
   <tizen:privilege name="http://tizen.org/privilege/internet"/>
