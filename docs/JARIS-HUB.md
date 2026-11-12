@@ -108,7 +108,7 @@ apps2samsung-cli install build\samsung\JarisHub.wgt --tv $TV_IP
 2. Press Allow on the TV. Samsung stores a pairing token on the bridge computer under `bridge/data/`.
 3. Restart the TV. With the bridge running and `open_on_power_on: true`, Jaris Hub should open a few seconds after the TV becomes active.
 4. Test the arrow keys, OK, Back, sleep timer and Look control.
-5. Open Home settings and arrange the installed apps. Put beIN SPORTS and mewatch near the front if they are installed. Add HDMI input shortcuts only after confirming which physical ports correspond to each device.
+5. Open Home settings and arrange the installed apps. Put beIN SPORTS and mewatch near the front if they are installed. The Input quick button sends Samsung's Source command through the bridge so you can choose an HDMI port from the TV's own Source menu. Custom pinned HDMI device tiles are not currently provided by the Samsung Tizen adapter.
 
 Samsung does not permit a third-party app to replace the TV's native Home screen. The Samsung Home button still opens Samsung's menu; use Back or the app row to return to Jaris Hub. The bridge is what reopens Jaris Hub automatically on power-on.
 
@@ -133,6 +133,6 @@ Never paste the token into chat or commit it. The current doorbell integration d
 - Install Apps2Samsung (or use Tizen Studio), sign the package and install it.
 - Approve the bridge pairing prompt on the TV.
 - Test on the actual S90D; upstream's Samsung real-TV test was on a 2021 Frame, so S90D-specific behaviour still needs a hands-on check.
-- Arrange beIN SPORTS, mewatch and confirmed HDMI inputs.
+- Arrange beIN SPORTS and mewatch. Use the Input quick button for the Samsung Source menu; custom pinned HDMI tiles would need a separate Samsung-specific enhancement.
 - Configure Home Assistant entity IDs and token separately if you want the smart-home panel.
 - Add Proxmox/Grafana/Prometheus only in a later phase.
